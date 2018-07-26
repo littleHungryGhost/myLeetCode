@@ -21,6 +21,8 @@ class Solution:
         root.right = self.reConstructBinaryTree(pre[root_index+1:], tin[root_index+1:])
         return root
 
+    def
+
 if __name__ == '__main__':
     s = Solution()
     pre = [1,2,4,7,3,5,6,8]

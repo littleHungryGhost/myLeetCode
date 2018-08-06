@@ -38,13 +38,7 @@ class Solution:
             return self.matrix_power(a, (n-1)/2)*self.matrix_power(a, 1)
         else:
             return self.matrix_power(a, n/2)
-    def Fibonacci3(self, n):
-        if n == 0:
-            return 0
-        if n == 1:
-            return 1
-        a, b, c, d = 1, 1, 1, 0
-        if n == 2:
+    
 
 
 if __name__ == '__main__':

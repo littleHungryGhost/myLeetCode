@@ -1,11 +1,16 @@
-import  numpy as np
-def split_data(data):
-    original = data
-    step = 20
-    temp = [original[0:1,i:i+step].reshape(20).tolist() for i in range(original.shape[1]-step)]
-    split_d = np.array(temp)
-    return split_d
+class task_queue:
+    queue = []
+    num = 0
 
-if __name__ == '__main__':
-    data = np.array(range(30)).reshape(1,30)
-    print split_data(data)
+    def append(self, obj):
+        self.queue.append(obj)
+
+    def print_queue(self):
+        print self.queue
+
+
+if __name__ == "__main__":
+    a = 1
+    for i in range(256):
+        a = a << 1
+        print i+1, " ", a

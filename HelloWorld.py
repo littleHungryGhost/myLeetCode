@@ -7,10 +7,6 @@ class task_queue:
 
     def print_queue(self):
         print self.queue
-
-
-if __name__ == "__main__":
-    a = 1
-    for i in range(256):
-        a = a << 1
-        print i+1, " ", a
+def test():
+    print "iner of the function"
+print "outer of function"

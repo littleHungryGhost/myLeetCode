@@ -10,7 +10,7 @@ def getLongestSubStr(string):
     i = 0
     while i < n:
         pre = position[ord(string[i])-ord('a')]
-        if i - pre >= cur_length:
+        if i - pre > cur_length:
             cur_length += 1
         else:
             if cur_length > max_length:
@@ -19,7 +19,9 @@ def getLongestSubStr(string):
             index = pre + 1
         position[ord(string[i])-ord('a')] = i
         i += 1
-    return string[index:index+max_length]
+    if cur_length > max_length:
+        max_length = cur_length
+    return string[index:index+max_length], max_length
 
 if __name__ == '__main__':
     a="arabcacfr"
